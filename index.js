@@ -16,7 +16,6 @@ SerialPort.list(function (e, ports) {
   });
   serialPortChoices.choices = listOfdevices
   listofports.push(serialPortChoices);
-  // Location: 41.894750,12.502400  Date/Time: 6/1/2080 00:00:11.80
 
   // generate questionarie
   inquirer.prompt(listofports)
