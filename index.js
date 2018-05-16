@@ -9,7 +9,7 @@ SerialPort.list(function (e, ports) {
   let serialPortChoices = {};
   serialPortChoices.type = 'list';
   serialPortChoices.message = 'Choose serial port you would like to connect:'
-  serialPortChoices.name = "theme";
+  serialPortChoices.name = "serialport";
   let listOfdevices = [];
   ports.forEach(element => {
     listOfdevices.push(element.comName);
@@ -17,12 +17,10 @@ SerialPort.list(function (e, ports) {
   serialPortChoices.choices = listOfdevices
   listofports.push(serialPortChoices);
 
-  // generate questionarie
+  // generate interaction
   inquirer.prompt(listofports)
   .then(answer => {
-    // let serialport = JSON.stringify(answer.theme);
-    console.log(answer.theme)
-    openPortAndOutputData(answer.theme);
+    openPortAndOutputData(answer.serialport);
   })
 })
 
@@ -35,6 +33,7 @@ function openPortAndOutputData(serialport){
     }
   });
   
+
   var parser = new Readline()
   port.pipe(parser)
   parser.on('data', function (data) {
@@ -42,4 +41,3 @@ function openPortAndOutputData(serialport){
     // data handling 
   })
 };
-// console.log(serialport);

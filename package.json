@@ -1,7 +1,7 @@
 {
   "name": "nodemiddleware",
   "version": "1.0.0",
-  "description": "Data handler for Pothole Detector",
+  "description": "Serial port reader using node.js. This project is part of personal project.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
