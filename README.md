@@ -1,5 +1,6 @@
 A node.js app. reads data from serial-port.
 For interaction, app will read connected devices and ask you to choose one of them to connect.
+It can be used to handle incoming data such as insert to db etc.
 
 
 
